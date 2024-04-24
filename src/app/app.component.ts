@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,26 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'CIFRADO-USUARIOS';
+
+	constructor(private router: Router){}
+
+	registrar(){
+		this.router.navigate(['guardar'])
+	}
+
+	listar(){
+		this.router.navigate(['listar'])
+	}
+
+	listarCifrado(){
+		this.router.navigate(['listarCifrado'])
+	}
+
+	buscarId(){
+		this.router.navigate(['buscarId'])
+	}
+
+	buscarUsuario(){
+		this.router.navigate(['buscarUsuario'])
+	}
 }
