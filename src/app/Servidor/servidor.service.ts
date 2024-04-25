@@ -27,7 +27,7 @@ export class ServidorService {
 		return this.http.get<Registro>(`${this.url}/buscarPorId/${id}`,{})
 	}
 
-	buscarRegistroUsuario(usuario: string){
+	buscarRegistroUsuario(usuario: String){
 		return this.http.get<Registro>(`${this.url}/buscarPorUsuario/${usuario}`, {})
 	}
 
