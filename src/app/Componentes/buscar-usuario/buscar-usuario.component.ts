@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ServidorService } from '../../Servidor/servidor.service';
-import { Router } from '@angular/router';
 import { Registro } from '../../Entidad/Registro';
 
 @Component({
@@ -12,7 +11,7 @@ import { Registro } from '../../Entidad/Registro';
   styleUrl: './buscar-usuario.component.css',
 })
 export class BuscarUsuarioComponent {
-  constructor(private router: Router, private service: ServidorService) {}
+  constructor(private service: ServidorService) {}
 
   user: Registro = new Registro();
   userBuscado: Registro = new Registro();
@@ -26,5 +25,5 @@ export class BuscarUsuarioComponent {
       });
     }
   }
-	
+
 }
