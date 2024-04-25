@@ -1,1 +1,38 @@
-<p>buscar-usuario works!</p>
+<div class="container">
+	<div class="card">
+		<div class="card-header text-center">
+			<h3> BUSQUEDA POR USUARIO </h3>
+		</div>
+		<div class="input-group">
+			<input 
+			type="text"
+			class="form-control"
+			placeholder="Ingresa un usuario"
+			aria-label="Buscar"
+			[(ngModel)]="user.usuario"
+			(ngModelChange)="buscarPorUsuario($event)">
+		</div>
+		<div class="card-body">
+			@if (userBuscado.id !== 0) {
+				<div>
+					<table class="table table-bordered">
+						<thead>
+							<tr class="text-center">
+								<th> ID </th>
+								<th> USUARIO </th>
+								<th> CONTRASEÑA </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<td> {{userBuscado.id}} </td>
+								<td> {{userBuscado.usuario}} </td>
+								<td> {{userBuscado.password}} </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			}
+		</div>
+	</div>
+</div>
